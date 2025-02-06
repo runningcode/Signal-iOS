@@ -24,6 +24,6 @@ platform :ios do
       skip_archive: true,
       skip_codesigning: true
     )
-    emerge_snapshot()
+    emerge_snapshot(scheme: "Signal")
   end
 end
