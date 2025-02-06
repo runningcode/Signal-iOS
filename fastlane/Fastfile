@@ -15,8 +15,9 @@
 
 default_platform(:ios)
 
-platform {:ios} do
-  lane :app_size do
-    emerge()
+platform :ios do
+  desc "Upload app for Emerge snapshot testing"
+  lane :app_snapshot do
+    emerge_snapshot(scheme: "Signal")
   end
 end
