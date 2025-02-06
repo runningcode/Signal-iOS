@@ -46,6 +46,9 @@
 		1704690C25D4C92B000793D8 /* test-jpg-rotated.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1704690B25D4C92B000793D8 /* test-jpg-rotated.jpg */; };
 		17E6049028A17BD300127680 /* ZkGroupIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6048F28A17BD200127680 /* ZkGroupIntegrationTest.swift */; };
 		17EC850C29133CDB00319C82 /* CancelledGroupRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EC850B29133CDB00319C82 /* CancelledGroupRing.swift */; };
+		258DF0D52D5516C1004EC31C /* SnapshottingTests in Frameworks */ = {isa = PBXBuildFile; productRef = 258DF0D42D5516C1004EC31C /* SnapshottingTests */; };
+		258DF0D72D55171C004EC31C /* PreviewGallery in Frameworks */ = {isa = PBXBuildFile; productRef = 258DF0D62D55171C004EC31C /* PreviewGallery */; };
+		258DF0D92D551738004EC31C /* SnapshotPreferences in Frameworks */ = {isa = PBXBuildFile; productRef = 258DF0D82D551738004EC31C /* SnapshotPreferences */; };
 		259D4DF2486F14DB112B3999 /* Pods_SignalServiceKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DA2BE463493965F5BC71C0 /* Pods_SignalServiceKitTests.framework */; };
 		2B5914CF7BCE3017430CFD84 /* Pods_SignalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADD293DAFC82BF3274F0F6 /* Pods_SignalTests.framework */; };
 		3236FCC42592B67B006D33B9 /* NameCollisionReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236FCC32592B67B006D33B9 /* NameCollisionReviewCell.swift */; };
@@ -7514,11 +7517,13 @@
 				455A16DE1F1FEA0000F86704 /* MetalKit.framework in Frameworks */,
 				4520D8D51D417D8E00123472 /* Photos.framework in Frameworks */,
 				0CE014267EDFBD2538E940A0 /* Pods_Signal.framework in Frameworks */,
+				258DF0D72D55171C004EC31C /* PreviewGallery in Frameworks */,
 				B6FE7EB71ADD62FA00A6D22F /* PushKit.framework in Frameworks */,
 				A11CD70D17FA230600A2D1B1 /* QuartzCore.framework in Frameworks */,
 				A163E8AB16F3F6AA0094D68B /* Security.framework in Frameworks */,
 				F9C5C8AA289451B900548EEE /* SignalServiceKit.framework in Frameworks */,
 				34A954BD271A471300B05242 /* SignalUI.framework in Frameworks */,
+				258DF0D92D551738004EC31C /* SnapshotPreferences in Frameworks */,
 				4CC1ECF9211A47CE00CC13BE /* StoreKit.framework in Frameworks */,
 				D2179CFE16BB0B480006F3AB /* SystemConfiguration.framework in Frameworks */,
 				D221A08E169C9E5E00537ABF /* UIKit.framework in Frameworks */,
@@ -7540,6 +7545,7 @@
 				2B5914CF7BCE3017430CFD84 /* Pods_SignalTests.framework in Frameworks */,
 				A1A018521805C5E800A052A6 /* QuartzCore.framework in Frameworks */,
 				A123C14916F902EE000AE905 /* Security.framework in Frameworks */,
+				258DF0D52D5516C1004EC31C /* SnapshottingTests in Frameworks */,
 				D202868216DBE0F4009068E9 /* SystemConfiguration.framework in Frameworks */,
 				D221A0AD169C9E5F00537ABF /* UIKit.framework in Frameworks */,
 				B69CD25119773E79005CE69A /* XCTest.framework in Frameworks */,
@@ -14591,6 +14597,9 @@
 				zh_TW,
 			);
 			mainGroup = D221A07E169C9E5E00537ABF;
+			packageReferences = (
+				258DF0D32D5516C1004EC31C /* XCRemoteSwiftPackageReference "SnapshotPreviews" */,
+			);
 			productRefGroup = D221A08A169C9E5E00537ABF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -20831,6 +20840,35 @@
 			defaultConfigurationName = "App Store Release";
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		258DF0D32D5516C1004EC31C /* XCRemoteSwiftPackageReference "SnapshotPreviews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EmergeTools/SnapshotPreviews";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		258DF0D42D5516C1004EC31C /* SnapshottingTests */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 258DF0D32D5516C1004EC31C /* XCRemoteSwiftPackageReference "SnapshotPreviews" */;
+			productName = SnapshottingTests;
+		};
+		258DF0D62D55171C004EC31C /* PreviewGallery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 258DF0D32D5516C1004EC31C /* XCRemoteSwiftPackageReference "SnapshotPreviews" */;
+			productName = PreviewGallery;
+		};
+		258DF0D82D551738004EC31C /* SnapshotPreferences */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 258DF0D32D5516C1004EC31C /* XCRemoteSwiftPackageReference "SnapshotPreviews" */;
+			productName = SnapshotPreferences;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D221A080169C9E5E00537ABF /* Project object */;
 }
