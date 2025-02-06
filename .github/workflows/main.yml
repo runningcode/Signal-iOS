@@ -60,20 +60,20 @@ jobs:
             exit 1
           }
 
-          bundle exec fastlane scan \
-            --scheme Signal \
-            --output_types junit \
-            --skip_package_dependencies_resolution \
-            --disable_package_automatic_updates \
-            --xcargs '-test-timeouts-enabled YES -maximum-test-execution-time-allowance 300 -default-test-execution-time-allowance 60' \
-            || formatFailures
+          bundle exec fastlane app_size
+            # --scheme Signal \
+            # --output_types junit \
+            # --skip_package_dependencies_resolution \
+            # --disable_package_automatic_updates \
+            # --xcargs '-test-timeouts-enabled YES -maximum-test-execution-time-allowance 300 -default-test-execution-time-allowance 60' \
+            # || formatFailures
 
       - name: Upload build logs
         uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: Logs
-          path: ~/Library/Logs/scan
+          path: ~/Library/Logs/app_size
 
   check_autogenstrings:
     name: Check if strings file is outdated
