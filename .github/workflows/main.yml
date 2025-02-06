@@ -55,12 +55,8 @@ jobs:
 
       - name: Build and Test
         run: |
-          function formatFailures() {
-            grep '<failure message' fastlane/test_output/report.junit | sed -E "s/^.*<failure message='(.*)'>(.*):([0-9]+)<\/failure>/::error file=\2,line=\3::\1/" | sed -E 's/&quot;/"/g'
-            exit 1
-          }
 
-          bundle exec fastlane app_size
+          bundle exec fastlane app_snapshot
             # --scheme Signal \
             # --output_types junit \
             # --skip_package_dependencies_resolution \
